@@ -1,0 +1,23 @@
+﻿@model List<Course>
+
+<div class="row">
+    <div class="container">
+        asdasdasdasdsad
+    </div>
+</div>
+
+<div class="row">
+    @foreach(var cr in Model)
+    {
+        <div class="col-3">
+            <div class="card">
+                <img src="~/img/@cr.Image" alt="">
+                <div class="card-body">
+                    <h5 class="card-title">@cr.Title</h5>
+                    <p class="card-text">@cr.Description</p>
+                    <a asp-controller="Course" asp-action="Details" asp-route-id="@cr.Id" class="btn btn-success">Go Details</a>
+                </div>
+            </div>
+        </div>
+    }
+</div>
